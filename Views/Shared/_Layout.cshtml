@@ -1,0 +1,33 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <!-- add css style link -->
+    <link href="~/css/main.css" rel="stylesheet" />
+    <!-- add icon link -->
+    <link rel="icon" href="img/web_icon.jpg">
+</head>
+
+<body>
+    <!-- Personal Info -->
+    <header> 
+        <h1>@ViewBag.Title</h1>
+        <menu>
+            <ul>
+                <li><a asp-controller="Hw2" asp-action="Index">Home</a></li>
+                <li><a asp-controller="Hw2" asp-action="Calculator">413 Grade Calculator</a></li>
+            </ul>
+        </menu>
+    </header>
+
+    @RenderBody()
+
+    <p></p><p></p>
+    <footer>What's the best thing about being young?</footer>
+    <footer>The certainty that the best is yet to come.</footer>
+
+    <script src="~/node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="~/js/calculator.js"></script>
+</body>
+</html>
