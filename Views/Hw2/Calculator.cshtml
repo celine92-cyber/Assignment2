@@ -6,26 +6,28 @@
     ViewBag.BestClassEver = "IS 413";
 }
 
+@model Assignment2.Models.CalculatorModel
 
 <body>
     <!-- Grade Calculator -->
     <h2>Calculate Your @ViewBag.BestClassEver Grade</h2>
-    <form>
+    <form method="post">
         <label>All Assignments Score</label>
-        <input id="assignments" type="number" min="0" max="100" step=". 01" required />
+        <input id="assignments" asp-for="Assignments" type="number" min="0" max="100" step=". 01" required />
         <br />
         <label>Group Projects Score</label>
-        <input id="groupProjects" type="number" min="0" max="100" step=". 01" required />
+        <input id="groupProjects" asp-for="GroupProjects" type="number" min="0" max="100" step=". 01" required />
         <br />
         <label>Quizzes Score</label>
-        <input id="quizzes" type="number" min="0" max="100" step=". 01" required />
+        <input id="quizzes" asp-for="Quizzes" type="number" min="0" max="100" step=". 01" required />
         <br />
         <label>Exams Score</label>
-        <input id="exams" type="number" min="0" max="100" step=". 01" required />
+        <input id="exams"  asp-for="Exams"type="number" min="0" max="100" step=". 01" required />
         <br />
         <label>Intex Score</label>
-        <input id="intex" type="number" min="0" max="100" step=". 01" required />
+        <input id="intex" asp-for="Intex" type="number" min="0" max="100" step=". 01" required />
         <br /><br />
         <input type="submit" value="Calculate My Grade" id="submit" class="submit" />
+        <div asp-validation-summary="All"></div>
     </form>
 </body>

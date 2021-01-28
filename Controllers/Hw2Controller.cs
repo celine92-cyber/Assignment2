@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Assignment2.Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,9 +14,18 @@ namespace Assignment2.Controllers
             return View();
         }
 
+        [HttpGet("Calculator")]
         public IActionResult Calculator ()
         {
             return View();
         }
+
+        [HttpPost("Calculator")]
+        public IActionResult Calculator(CalculatorModel model)
+        {
+            return View();
+
+        }
+
     }
 }
